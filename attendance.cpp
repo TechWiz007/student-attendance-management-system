@@ -1,9 +1,3 @@
-/*
-Author: https://www.cppbuzz.com
-Date: 20th Jan 2018
-For more projects please visit : https://www.cppbuzz.com
-*/
-
 #include <iostream>
 #include <string>
 #include <fstream>
