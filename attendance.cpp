@@ -5,22 +5,22 @@
 
 using namespace std;
 
-int adminView();
-int studentView();
-int studentLogin();
+void adminView();
+void studentView();
+void studentLogin();
 int checkCredentials(string userName, string password);
-int getAllStudentsbyRollNo();
-int deleteAllStudents();
-int deleteStudentbyRollno();
-int checkListOfStudentsRegistered();
-int checkPresenseCountbyRollno();
-int getListOfStudentsWithTheirPresenseCount();
-int registerStudent();
-int adminLogin();
-int registerStudent();
+void getAllStudentsbyRollNo();
+void deleteAllStudents();
+void deleteStudentbyRollno();
+void checkListOfStudentsRegistered();
+void checkPresenseCountbyRollno();
+void getListOfStudentsWithTheirPresenseCount();
+void registerStudent();
+void adminLogin();
+void registerStudent();
 int markMyAttendance(string username);
 int countMyAttendance(string username);
-int delay();
+void delay();
 
 int delay()
 {
