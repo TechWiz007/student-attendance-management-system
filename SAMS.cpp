@@ -25,6 +25,27 @@ void delay() {
     } 
 	}
 	}
+
+int sendLeaveApplication(string username) {
+	system("cls");
+	char add[100];
+	cout<<"\nWrite your application here: ";
+	getchar();
+	cin.getline(add, 100);
+
+	time_t now = time(0);
+	tm *ltm = localtime(&now);
+	
+	ofstream out;
+	out.open("application.dat", ios::app);
+	out<<add<<" -> "<<ltm->tm_mday<<"/"<<1+ltm->tm_mon<<"/"<<1900+ltm->tm_year<<" -> "<<username<<"\n";
+	out.close();
+	cout<<"\nApplication successfully sent!!";
+	cout<<"\nPlease any key to continue...";
+	getchar();
+	delay();
+	return 0;	
+}
 	
 int countMyAttendance(string username) {
 	int total_lines = 0;
@@ -236,7 +257,7 @@ void takeStudentAttendance()
     }
     read.close();
 
-cout<<"\n Please any key to continue..";
+cout<<"\nPlease any key to continue...";
 
 getchar();getchar();
 }
@@ -251,8 +272,8 @@ void studentLogin() {
 	cin>>password;
 	int res = checkStudentCredentials(username, password);
 	if(res != 1) {	
-    cout<<"\n Invalid Credentials !!";
-    cout<<"\n Press any key for Main Menu..";
+    cout<<"\nInvalid Credentials !!";
+    cout<<"\nPress any key for Main Menu...";
     getchar(); getchar();    
     return ;
 	} 
@@ -269,7 +290,7 @@ void studentLogin() {
     switch(choice) {
     	case 1: countMyAttendance(username);
 				break;
-        //case 2: sendLeaveApplication(username);
+        case 2: sendLeaveApplication(username);
 				break;
         case 0: goBack = 1;
 				break;
