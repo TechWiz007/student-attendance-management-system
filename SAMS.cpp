@@ -122,7 +122,7 @@ void registerStudent() {
 	cin.getline(add, 100);
     cout<<"\nEnter Father's Name (First Name, Middle Name, Last Name): ";     
 	cin>>fathers_first_name>>fathers_middle_name>>fathers_last_name;
-    cout<<"\n Enter Mother's Name (First Name, Middle Name, Last Name): ";     
+    cout<<"\nEnter Mother's Name (First Name, Middle Name, Last Name): ";     
 	cin>>mothers_first_name>>mothers_middle_name>>mothers_last_name;
     
     //check if record already exist..
@@ -141,7 +141,7 @@ void registerStudent() {
     }
     if(recordFound == 1)
     {
-    cout<<"\n Username is already used. Please choose another username...";
+    cout<<"\nUsername is already used. Please choose another username...";
     getchar(); getchar();
     delay();
     read.close();
@@ -164,8 +164,8 @@ void registerStudent() {
 	out1<<"Mother's name (First Name, Middle Name, Last Name): "<<mothers_first_name<<" "<<mothers_middle_name<<" "<<mothers_last_name <<"\n";
 	out1<<"\n\n\nAttendance Records:\n";
 	out1.close();
-	cout<<"\n Student Registered Successfully !!";
-    cout<<"\n Please any key to continue...";
+	cout<<"\nStudent Registered Successfully !!";
+    cout<<"\nPlease any key to continue...";
 	getchar(); getchar();	
 }
 
@@ -363,7 +363,7 @@ void adminView() {
 			break;
 	case 0: goBack = 1;
 	break;
-    default: cout<<"\n Invalid choice. Enter again...";
+    default: cout<<"\nInvalid choice. Enter again...";
     getchar();           	
 	}   
 	if(goBack == 1)
@@ -378,9 +378,9 @@ void adminLogin() {
 	cout<<"\n ######## Admin Login ########\n\n\n";	
 	string username;
 	string password;
-	cout<<"\n Enter username: ";
+	cout<<"\nEnter username: ";
 	cin>>username;
-	cout<<"\n Enter password: ";
+	cout<<"\nEnter password: ";
 	cin>>password;
 	if(username=="co.tpoly" && password=="co.tpoly@123") {
     adminView();
@@ -388,8 +388,8 @@ void adminLogin() {
     delay();
 	}   
 	else {
-	cout<<"\n Error! Invalid Credintials...";	
-	cout<<"\n Press any key for main menu...";
+	cout<<"\nError! Invalid Credintials...";	
+	cout<<"\nPress any key for main menu...";
 	getchar();getchar();
 	}
 }
@@ -467,15 +467,14 @@ int main (int argc, char** argv) {
 	        while(1)
 	        {
 		    system("cls");
-        	cout<<"\nAre you sure, you want to exit? (yes | no)\n";
+        	cout<<"\nAre you sure, you want to exit? (y for yes | n for no)\n";
         	char ex;
         	cin>>ex;
         	if(ex == 'y' || ex == 'Y') {
-			cout<<"Thank you for using Student Attendance Management System...\n\n\n\nDevelopers:\nBhargav Gajare\nOm Awadhoot\nSurabhi Mane\n";
+			cout<<"Thank you for using Student Attendance Management System...\n\n\n\nDevelopers:\nBhargav Gajare\nOm Awadhoot\nSurabhi Mane\n\n\n";
         	exit(0);
         	}
-        	else if(ex == 'n' || ex == 'N')
-            {
+        	else if(ex == 'n' || ex == 'N') {
             break;
             }
             else {
